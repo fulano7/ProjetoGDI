@@ -10,7 +10,7 @@ import java.sql.Statement;
 public class CadastroCliente {
 
 	static String username = "system";
-	static String password = "onibusvei";
+	static String password = "senha aqui";
 	
 	// pra testar conexao:
 	
