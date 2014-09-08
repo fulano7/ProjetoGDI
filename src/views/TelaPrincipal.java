@@ -30,11 +30,21 @@ public class TelaPrincipal extends JFrame {
 			}
 		});
 	}
+	
+	static class AcaoBtnCadastrar implements ActionListener{
+
+		@Override
+		public void actionPerformed(ActionEvent arg0) {
+			new TelaCadastro();
+		}
+		
+	}
 
 	/**
 	 * Create the frame.
 	 */
 	public TelaPrincipal() {
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 800, 600);
 		contentPane = new JPanel();
@@ -51,11 +61,7 @@ public class TelaPrincipal extends JFrame {
 		contentPane.add(btnBuscarCliente);
 		
 		JButton btnCadastrarCliente= new JButton("Cadastrar Cliente");
-		btnCadastrarCliente.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent arg0) {
-				new TelaCadastro();
-			}
-		});
+		btnCadastrarCliente.addActionListener(new AcaoBtnCadastrar());
 		btnCadastrarCliente.setBounds(265, 218, 236, 80);
 		contentPane.add(btnCadastrarCliente);
 	}
